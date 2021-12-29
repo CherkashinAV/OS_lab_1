@@ -1,1 +1,85 @@
-
+execve("./test", ["./test"], 0x7fff93b38c20 /* 64 vars */) = 0
+brk(NULL)                               = 0x55eabb780000
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=85415, ...}) = 0
+mmap(NULL, 85415, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f559be8e000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0000b\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=144976, ...}) = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f559be8c000
+mmap(NULL, 2221184, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f559ba5d000
+mprotect(0x7f559ba77000, 2093056, PROT_NONE) = 0
+mmap(0x7f559bc76000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19000) = 0x7f559bc76000
+mmap(0x7f559bc78000, 13440, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f559bc78000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260\34\2\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=2030544, ...}) = 0
+mmap(NULL, 4131552, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f559b66c000
+mprotect(0x7f559b853000, 2097152, PROT_NONE) = 0
+mmap(0x7f559ba53000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1e7000) = 0x7f559ba53000
+mmap(0x7f559ba59000, 15072, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f559ba59000
+close(3)                                = 0
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f559be89000
+arch_prctl(ARCH_SET_FS, 0x7f559be89740) = 0
+mprotect(0x7f559ba53000, 16384, PROT_READ) = 0
+mprotect(0x7f559bc76000, 4096, PROT_READ) = 0
+mprotect(0x55eababee000, 4096, PROT_READ) = 0
+mprotect(0x7f559bea3000, 4096, PROT_READ) = 0
+munmap(0x7f559be8e000, 85415)           = 0
+set_tid_address(0x7f559be89a10)         = 2082
+set_robust_list(0x7f559be89a20, 24)     = 0
+rt_sigaction(SIGRTMIN, {sa_handler=0x7f559ba62cb0, sa_mask=[], sa_flags=SA_RESTORER|SA_SIGINFO, sa_restorer=0x7f559ba6f8a0}, NULL, 8) = 0
+rt_sigaction(SIGRT_1, {sa_handler=0x7f559ba62d50, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f559ba6f8a0}, NULL, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(136, 0), ...}) = 0
+brk(NULL)                               = 0x55eabb780000
+brk(0x55eabb7a1000)                     = 0x55eabb7a1000
+write(1, "You didn't specify the number of"..., 71You didn't specify the number of threads when you started the program.
+) = 71
+write(1, "Program will run with default nu"..., 50Program will run with default number of threads 2
+) = 50
+fstat(0, {st_mode=S_IFCHR|0620, st_rdev=makedev(136, 0), ...}) = 0
+write(1, "Input matrix size: ", 19Input matrix size: )     = 19
+read(0, 3 3
+"3 3\n", 1024)                  = 4
+write(1, "Input window size (from 3 and ot"..., 51Input window size (from 3 and other odd numers()): ) = 51
+read(0, 3
+"3\n", 1024)                    = 2
+write(1, "Input count of median filters to"..., 41Input count of median filters to matrix: ) = 41
+read(0, 1
+"1\n", 1024)                    = 2
+read(0, 1 1 0
+"1 1 0\n", 1024)                = 6
+read(0, 0 1 1
+"0 1 1\n", 1024)                = 6
+read(0, 1 1 1
+"1 1 1\n", 1024)                = 6
+write(1, "Thread 1 is working with [0,1) r"..., 36Thread 1 is working with [0,1) rows
+) = 36
+write(1, "Thread 2 is working with [1,3) r"..., 36Thread 2 is working with [1,3) rows
+) = 36
+mmap(NULL, 8392704, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f559ae6b000
+mprotect(0x7f559ae6c000, 8388608, PROT_READ|PROT_WRITE) = 0
+clone(child_stack=0x7f559b66afb0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7f559b66b9d0, tls=0x7f559b66b700, child_tidptr=0x7f559b66b9d0) = 2085
+mmap(NULL, 8392704, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f559a66a000
+mprotect(0x7f559a66b000, 8388608, PROT_READ|PROT_WRITE) = 0
+clone(child_stack=0x7f559ae69fb0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7f559ae6a9d0, tls=0x7f559ae6a700, child_tidptr=0x7f559ae6a9d0) = 2086
+futex(0x7f559b66b9d0, FUTEX_WAIT, 2085, NULL) = 0
+write(1, "--------------------------------"..., 50-------------------------------------------------
+) = 50
+write(1, "1 1 1 \n", 71 1 1 
+)                 = 7
+write(1, "1 1 1 \n", 71 1 1 
+)                 = 7
+write(1, "1 1 1 \n", 71 1 1 
+)                 = 7
+lseek(0, -1, SEEK_CUR)                  = -1 ESPIPE (Illegal seek)
+exit_group(0)                           = ?
++++ exited with 0 +++
